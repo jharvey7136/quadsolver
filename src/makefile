@@ -6,10 +6,10 @@ CC = gcc
 RUN = ./main
 
 main: main.o
-	$(CC) $(CFLAGS) -o main main.o
+	$(CC) $(CFLAGS) -o main main.o input.o
 
-main.o: main.c main.h
-	$(CC) $(CFLAGS) -c main.c
+main.o: main.c main.h input.c
+	$(CC) $(CFLAGS) -c main.c input.c
 
 run:
 	${RUN}
