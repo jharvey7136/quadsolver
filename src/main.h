@@ -4,4 +4,8 @@
 #include <string.h>
 
 //prototypes
-int input(double *a, double *b, double *c);
+int input(char * line, size_t size);
+
+void menu();
+
+int validate(char * line, double variables[]);
