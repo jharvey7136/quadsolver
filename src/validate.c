@@ -29,7 +29,5 @@ int validate(char * line, double variables[])
     i++;
   }
 
-
-
   return result;
 }

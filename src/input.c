@@ -6,19 +6,18 @@
 
 int input(char * line, size_t size)
 {
-  menu();
-  
+
   int result = -1;
 
   if(fgets(line, size, stdin) == NULL)    //test for empty input
   {
     result = -1;
-    printf("failed if\n" );
+    //printf("failed if\n" );
   }
   else if(line[strlen(line)-1] != '\n') //test to make sure a return character is at the end
   {
     result = -1;
-    printf("failed else if\n" );
+    //printf("failed else if\n" );
   }
   else
   {

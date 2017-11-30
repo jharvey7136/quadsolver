@@ -9,10 +9,11 @@ int main(int argc, char *argv[])
 {
   double a, b, c;
   double variables[3];
+  double roots[2];
   char * line = malloc(80);
   size_t size = 80;
 
-
+  menu();
 
   if(input(line, size) == 0)
   {
@@ -23,9 +24,26 @@ int main(int argc, char *argv[])
       input(line, size);
     }
 
-    //printf("%f\n", variables[0] );
-    //printf("%f\n", variables[1] );
-    //printf("%f\n", variables[2] );
+    printf("Numbers Inputted:\n" );
+    printf("%f\n", variables[0] );
+    printf("%f\n", variables[1] );
+    printf("%f\n\n", variables[2] );
+
+    double disc = discriminant(variables);    //calculate discriminant
+
+    printf("Disc = %f\n\n", disc);
+
+    //int result = qsolve(variables, roots);
+
+    if(qsolve(variables, roots) == 0)
+    {
+      printf("Root 1: %f\n", roots[0]);
+      printf("Root 2: %f\n", roots[1]);
+    }
+
+
+
+
   }
 
 
