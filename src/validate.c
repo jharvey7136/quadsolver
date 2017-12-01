@@ -9,13 +9,14 @@ int validate(char * line, double variables[])
 
   int result = 0;
   char * token;
-  //const char del[2] = " "  ;
+
   token = strtok(line, " ");  //get first token of line
 
-  int i = 0;    //counter for loop
+  int i = -1;    //counter for loop
 
   while (token != NULL)     //walk through rest of tokens, NULL pointer returned if no tokens are left
   {
+    i++;
     if (!(token[0] >= '0' && token[0] <= '9'))
     {
        result = -1;
@@ -26,8 +27,11 @@ int validate(char * line, double variables[])
     }
 
     token = strtok(NULL, " ");
-    i++;
+
   }
+
+  if (i < 2) result = -2;
+  if (i > 2) result = -3;
 
   return result;
 }
