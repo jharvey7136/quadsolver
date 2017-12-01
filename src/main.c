@@ -7,7 +7,8 @@
 
 int main(int argc, char *argv[])
 {
-  double a, b, c;
+  //variables
+  
   double variables[3];
   double roots[2];
   char * line = malloc(80);
@@ -24,34 +25,32 @@ int main(int argc, char *argv[])
       input(line, size);
     }
 
-    printf("Numbers Inputted:\n" );
-    printf("%f\n", variables[0] );
-    printf("%f\n", variables[1] );
-    printf("%f\n\n", variables[2] );
+    //printf("Numbers Inputted:\n" );
+    //printf("%f\n", variables[0] );
+    //printf("%f\n", variables[1] );
+    //printf("%f\n\n", variables[2] );
 
     double disc = discriminant(variables);    //calculate discriminant
 
-    printf("Disc = %f\n\n", disc);
+    //printf("Disc = %f\n\n", disc);
 
-    //int result = qsolve(variables, roots);
-
-    if(qsolve(variables, roots) == 0)
+    if(disc > 0 || disc == 0)   //disc positive: 2 real roots. disc = zero: 1 root
     {
-      printf("Root 1: %f\n", roots[0]);
-      printf("Root 2: %f\n", roots[1]);
+      if (qsolve(variables, roots) == 0)
+      {
+        output(roots[0], roots[1]);
+      }
+      else
+      {
+        perror("qsolve error");
+      }
+    }
+    else    //disc negative: complex solutions
+    {
+      printf("Complex solutions\n");
     }
 
-
-
-
   }
-
-
-
-
-
-
-
 
   return 0;
 }
@@ -61,6 +60,6 @@ int main(int argc, char *argv[])
 void menu()
 {
   printf("\nQuadratic Equation Solver\n");
-  printf("Enter variables a, b, and c to solve (a b c). Press 'q' to quit\n");
+  printf("Enter variables a, b, and c to solve (a b c)\n");
   printf("Enter Input: ");
 }

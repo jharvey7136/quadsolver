@@ -15,3 +15,5 @@ double mysqrt(double value);
 double discriminant(double variables[]);
 
 int qsolve(double variables[], double roots[]);
+
+void output(float x1, float x2);
