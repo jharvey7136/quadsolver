@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     double disc = discriminant(variables);    //calculate discriminant
 
     //testing
-    //printf("Disc = %f\n\n", disc);
+    printf("Disc = %f\n\n", disc);
 
     if(disc > 0 || disc == 0)   //disc positive: 2 real roots. disc = zero: 1 root
     {

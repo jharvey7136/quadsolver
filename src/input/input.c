@@ -5,7 +5,7 @@
   gets one line of input and stores in 'line'. returns 0 upon success
 */
 
-#include "main.h"
+#include "../main/main.h"  
 
 
 int input(char * line, size_t size)

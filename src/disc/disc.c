@@ -3,7 +3,7 @@
   function to simply calculate the discriminant of the quadratic equation.
   takes in the variables a, b, and c entered by user, and returns a double for the discriminant
 */
-#include "main.h"   
+#include "../main/main.h"   
 
 double discriminant(double variables[])
 {

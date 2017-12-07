@@ -5,7 +5,7 @@
   takes in a positive double to square root, returns result if successful
 */
 
-#include "main.h"
+#include "../main/main.h"  
 
 double mysqrt(double value)
 {

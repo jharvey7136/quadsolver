@@ -4,7 +4,7 @@
   tests each function with good and bad input, prints results
 */
 
-#include "main.h"
+#include "../main/main.h"  
 
 int main(int argc, char *argv[]){
 

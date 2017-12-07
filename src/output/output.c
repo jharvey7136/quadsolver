@@ -5,7 +5,7 @@
   calculates and output absolute and relative error of x1 and x2.
 */
 
-#include "main.h"
+#include "../main/main.h"  
 #include <float.h>
 
 void output(float x1, float x2)

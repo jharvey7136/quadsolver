@@ -5,7 +5,7 @@
   returns unsuccessfully if there are complex solutions.
 */
 
-#include "main.h"
+#include "../main/main.h"  
 
 int qsolve(double variables[], double roots[])
 {
