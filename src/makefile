@@ -23,7 +23,7 @@ utest: utest.o
 	$(CC) $(CFLAGS) -o runutest utest.o validate.o disc.o mysqrt.o qsolve.o -lm
 
 utest.o:
-	$(CC) $(CFLAGS) -c utest/utest.c validate/validate.c disc/disc.c mysqrt/mysqrt.c qsolve/qsolve.c
+	$(CC) $(CFLAGS) -c utests/utest.c validate/validate.c disc/disc.c mysqrt/mysqrt.c qsolve/qsolve.c
 
 fulltest: fulltest.o
 	$(CC) $(CFLAGS) -o runsystemtest fulltest.o disc.o mysqrt.o qsolve.o output.o -lm
